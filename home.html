@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentEasy - Home</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: antiquewhite;
+      color: #333;
+    }
+
+    #nav-container,
+    #footer-container {
+      z-index: 10;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      background-color: burlywood;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .container-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 40px 20px;
+      margin-bottom: 10%;
+    }
+
+    .card-category {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 280px;
+      transition: transform 0.2s ease;
+    }
+
+    .card-category:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-category img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-category-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-category-body h5 {
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .card-category-body p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      font-size: 2rem;
+      margin-top: 40px;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="nav-container"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Your Perfect Place in Navsari</h1>
+  </section>
+
+  <!-- Categories Section -->
+  <div class="container-cards">
+
+    <div class="card-category">
+      <img src="city1.jpg" alt="Navsari Nagri" />
+      <div class="card-category-body">
+        <h5>Navsari Nagri</h5>
+        <p>Explore prime rental options in Navsari city, close to schools and markets.</p>
+      </div>
+    </div>
+
+    <div class="card-category">
+      <img src="city2.jpg" alt="Apartments" />
+      <div class="card-category-body">
+        <h5>Apartments</h5>
+        <p>Modern apartments for families and professionals in central Navsari.</p>
+      </div>
+    </div>
+
+    <div class="card-category">
+      <img src="city3.jpg" alt="Hostels" />
+      <div class="card-category-body">
+        <h5>Hostels</h5>
+        <p>Affordable hostel accommodations for students and working professionals.</p>
+      </div>
+    </div>
+
+    <div class="card-category">
+      <img src="city4.jpg" alt="Surrounding Areas" />
+      <div class="card-category-body">
+        <h5>Surroundings</h5>
+        <p>Peaceful rentals in calm surroundings outside Navsari city center.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Load Navbar
+    fetch("navbar.html").then(res => res.text()).then(data => {
+      document.getElementById("nav-container").innerHTML = data;
+    });
+
+    // Load Footer
+    fetch("footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - RentEasy</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: antiquewhite;
+        }
+
+        .hero {
+            background-color: antiquewhite;
+            margin-top: 2%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+
+        .hero h1 {
+            position: relative;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #4f6df5;
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="nav-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About RentEasy</h1>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <!-- About RentEasy -->
+            <div class="col-12">
+                <div class="card p-4">
+                    <h3 class="section-title">Who We Are</h3>
+                    <p>
+                        <strong>RentEasy</strong> is a rental property portal created in <strong>2025</strong> by
+                        <strong>Neha Hiralal Jaiswar (BCA)</strong>. The platform is designed to simplify the process of
+                        finding rental homes, apartments, and hostels in and around <strong>Navsari, Gujarat</strong>.
+                        With a user-friendly interface, RentEasy connects tenants with property owners, ensuring
+                        transparency and ease of communication.
+                    </p>
+                </div>
+            </div>
+
+            <!-- About Navsari -->
+            <div class="col-12">
+                <div class="card p-4">
+                    <h3 class="section-title">About Navsari</h3>
+                    <p>
+                        Navsari, often called the <em>"Land of Parsis"</em>, is a historic and culturally rich city in
+                        Gujarat. Known for its vibrant traditions, Navsari is one of the oldest municipalities in India,
+                        with a unique blend of modern development and cultural heritage. The city is home to renowned
+                        educational institutions, industries, and is surrounded by lush greenery.
+                    </p>
+                    <p>
+                        Navsari is also famous for its connection to Mahatma Gandhi, whose grandfather once worked here.
+                        It is a hub for education, business, and culture, attracting students, professionals, and
+                        families alike.
+                        Its close proximity to Surat makes it an ideal residential location for people who prefer calm
+                        living while staying connected to larger cities.
+                    </p>
+                    <p>
+                        RentEasy focuses on providing tailored rental solutions for people in Navsari — from affordable
+                        student
+                        hostels to luxury apartments. Whether you’re new to the city or a local looking for a better
+                        place,
+                        RentEasy helps you find your perfect home.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-12">
+                <div class="card p-4">
+                    <h3 class="section-title">Contact Us</h3>
+                    <p>
+                        For any queries or support, feel free to reach out to us: <br>
+                        📧 Email: <a href="mailto:jneha200325@gmail.com">jneha200325@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load navbar
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("nav-container").innerHTML = data);
+
+        // Load footer
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+
+</body>
+
+</html>
